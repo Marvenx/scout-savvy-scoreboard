@@ -2,7 +2,7 @@
 import { MatchEvent } from "@/data/mockData";
 import { cn } from "@/lib/utils";
 import { 
-  Ball, 
+  Ball as SoccerBall, // Use Ball but rename to avoid confusion
   Award, 
   Target, 
   Shield, 
