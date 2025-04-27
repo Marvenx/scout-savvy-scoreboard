@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,15 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+                // Football specific colors
+                pitch: '#2B8A3E', // Green for field
+                teamPrimary: '#1A365D', // Navy blue
+                teamSecondary: '#38B2AC', // Teal accent
+                highlight: '#ED8936', // Orange for highlights
+                lowValue: '#F56565', // Red for bad stats
+                highValue: '#48BB78', // Green for good stats
+                neutral: '#718096', // Gray for neutral values
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +93,31 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
+				},
+                'pulse-stat': {
+                    '0%, 100%': {
+                        opacity: '1',
+                    },
+                    '50%': {
+                        opacity: '0.7',
+                    },
+                },
+                'slide-in': {
+                    '0%': {
+                        transform: 'translateY(10px)',
+                        opacity: '0',
+                    },
+                    '100%': {
+                        transform: 'translateY(0)',
+                        opacity: '1',
+                    },
+                },
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+                'pulse-stat': 'pulse-stat 2s ease-in-out infinite',
+                'slide-in': 'slide-in 0.3s ease-out forwards',
 			}
 		}
 	},
