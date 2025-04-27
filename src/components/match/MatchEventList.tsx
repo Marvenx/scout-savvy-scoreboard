@@ -2,7 +2,7 @@
 import { MatchEvent } from "@/data/mockData";
 import { cn } from "@/lib/utils";
 import { 
-  Ball as SoccerBall, // Use Ball but rename to avoid confusion
+  Soccer, // Soccer icon is available in lucide-react
   Award, 
   Target, 
   Shield, 
@@ -30,7 +30,7 @@ const MatchEventList = ({ events, playerId }: MatchEventListProps) => {
   // Get icon for event type
   const getEventIcon = (type: MatchEvent['type']) => {
     switch(type) {
-      case 'goal': return Ball;
+      case 'goal': return Soccer;
       case 'assist': return Award;
       case 'shot': return Target;
       case 'save': return Shield;
@@ -40,7 +40,7 @@ const MatchEventList = ({ events, playerId }: MatchEventListProps) => {
       case 'red': return UserX;
       case 'substitution': return ArrowRightLeft;
       case 'injury': return Activity;
-      default: return Ball;
+      default: return Soccer;
     }
   };
   
