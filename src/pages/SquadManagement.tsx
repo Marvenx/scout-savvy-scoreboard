@@ -24,8 +24,8 @@ import { cn } from "@/lib/utils";
 
 const SquadManagement = () => {
   const [searchTerm, setSearchTerm] = useState("");
-  const [positionFilter, setPositionFilter] = useState("");
-  const [marketValueFilter, setMarketValueFilter] = useState("");
+  const [positionFilter, setPositionFilter] = useState("all");
+  const [marketValueFilter, setMarketValueFilter] = useState("any");
   
   // Calculate average form rating for a player
   const getAvgForm = (formValues: number[]) => {
@@ -50,7 +50,7 @@ const SquadManagement = () => {
       player.nationality.toLowerCase().includes(searchTerm.toLowerCase());
     
     // Filter by position
-    const matchesPosition = positionFilter === "" || player.position === positionFilter;
+    const matchesPosition = positionFilter === "all" || player.position === positionFilter;
     
     // Filter by market value
     let matchesMarketValue = true;
@@ -68,8 +68,8 @@ const SquadManagement = () => {
   // Reset all filters
   const handleResetFilters = () => {
     setSearchTerm("");
-    setPositionFilter("");
-    setMarketValueFilter("");
+    setPositionFilter("all");
+    setMarketValueFilter("any");
   };
 
   return (

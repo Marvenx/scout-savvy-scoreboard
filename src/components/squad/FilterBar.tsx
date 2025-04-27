@@ -51,7 +51,7 @@ const FilterBar = ({
             <SelectValue placeholder="Position" />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="">All Positions</SelectItem>
+            <SelectItem value="all">All Positions</SelectItem>
             {positions.map((position) => (
               <SelectItem key={position} value={position}>
                 {position}
@@ -66,7 +66,7 @@ const FilterBar = ({
             <SelectValue placeholder="Market Value" />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="">Any Value</SelectItem>
+            <SelectItem value="any">Any Value</SelectItem>
             <SelectItem value="under20">Under €20M</SelectItem>
             <SelectItem value="20to40">€20M - €40M</SelectItem>
             <SelectItem value="over40">Over €40M</SelectItem>
